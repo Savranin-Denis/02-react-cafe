@@ -2,8 +2,10 @@ import 'modern-normalize';
 import './global.css';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-// import App from './componennts/App/App';
+import App from './componennts/App/App';
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>{/* <App /> */}</StrictMode>
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
