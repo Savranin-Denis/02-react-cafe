@@ -1,6 +1,5 @@
 import css from './VoteOptions.module.css';
 import type { VoteType } from '../../types/votes';
-// import { useState } from 'react';
 
 interface VoteOptionsProps {
   onVote: (vote: VoteType) => void;
@@ -24,12 +23,14 @@ export default function VoteOptions({
       <button onClick={() => onVote('bad')} className={css.button}>
         Bad
       </button>
-      <button
-        onClick={() => onReset()}
-        className={`${css.button} ${css.reset}`}
-      >
-        Reset
-      </button>
+      {canReset && (
+        <button
+          onClick={() => onReset()}
+          className={`${css.button} ${css.reset}`}
+        >
+          Reset
+        </button>
+      )}
     </div>
   );
 }
